@@ -20,6 +20,7 @@ def quick_sort(array,low,high):
         quick_sort(array,low,key_index)
         quick_sort(array,key_index+1,high)
 
+
 if __name__ == '__main__':
     array = [8,10,9,6,4,16,5,13,26,18,2,45,34,23,1,7,3]
     print array
