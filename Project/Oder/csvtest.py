@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import csvtest
+import csv
 
 def getSortedValues(row):
     sortedValues=[]
@@ -18,7 +18,7 @@ rows = [{'Column1': 'xiaodeng', 'Column2': '1','Column3': '2'},
 names={'Column1':'名字', 'Column2':'栏目2', 'Column3':'栏目3'}
 fileobj=open('csv1.csv','wb')
 fileobj.write('\xEF\xBB\xBF')
-writer = csvtest.writer(fileobj)
+writer = csv.writer(fileobj)
 sortedValues = getSortedValues(names)
 writer.writerow(sortedValues)
 for row in rows:
