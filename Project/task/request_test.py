@@ -39,31 +39,88 @@
 # if __name__=="__main__":
 #     main()
 
+#test-successful
+
+# import urllib2
+# import json
+# import sys
+# from bs4 import BeautifulSoup
+#
+# def http_get():
+#     url='https://book.douban.com/tag/%E5%8F%A4%E5%85%B8%E6%96%87%E5%AD%A6'
+#     #url='https://book.douban.com/tag/%E5%8F%A4%E5%85%B8%E6%96%87%E5%AD%A6?start=20&type=T'
+#     reload(sys)
+#     sys.setdefaultencoding('utf-8')
+#     response=urllib2.urlopen(url)
+#     ret=response.read()
+#     #print ret
+#     soup=BeautifulSoup(ret,"lxml")
+#     for i in soup.find_all('ul',class_="subject-list"):
+#         all=""
+#         for link in i.find_all('li', class_="subject-item"):
+#             allBrands =all+link.get_text()
+#             img = link.img.get('src')
+#             #allBrands += ' %s' %img
+#             all=allBrands+img
+#         toJson=json.dumps(all,ensure_ascii=False,encoding='utf-8')
+#         rttoJson=toJson.replace("\\n"," ")
+#         return rttoJson
+# if __name__ == "__main__":
+#     print http_get()
+#     fo=open('request.csv','w')
+#     fo.write(http_get())
+#     fo.close()
+
+
 import urllib2
 import json
 import sys
+import re
 from bs4 import BeautifulSoup
-
-def http_get():
-    url='https://book.douban.com/tag/%E5%8F%A4%E5%85%B8%E6%96%87%E5%AD%A6'
+def http_get(url):
+    #对系统编码进行默认设置
     reload(sys)
     sys.setdefaultencoding('utf-8')
+    #打开路径所对应的文件，并且读取html
     response=urllib2.urlopen(url)
-    ret=response.read()
-    #print ret
+    ret=response.read().decode('utf-8')
+    #解析html
     soup=BeautifulSoup(ret,"lxml")
+    #取标签ul下的数据
+    all=""
     for i in soup.find_all('ul',class_="subject-list"):
-        all=""
+
         for link in i.find_all('li', class_="subject-item"):
-            allBrands =all+link.get_text()
+            row_dict = {}
+            allBrands = link.get_text()
+            #print allBrands
+            row_dict['name']= allBrands
+            #print row_dict
             img = link.img.get('src')
+            row_dict['img'] = img
             #allBrands += ' %s' %img
-            all=allBrands+img
-        toJson=json.dumps(all,ensure_ascii=False,encoding='utf-8')
-        rttoJson=toJson.replace("\\n"," ")
-        return rttoJson
+            row_str = json.dumps(row_dict,ensure_ascii=False,encoding='utf-8')
+            all += row_str
+            all1=all.replace("\\n",' ')
+
+            #show=re.split(r'\s+',str)
+            # all=allBrands+img
+    toJson=json.dumps(all1,ensure_ascii=False,encoding='utf-8')
+    #rttoJson=toJson.replace("\\n"," ")
+    #rttoJson = all
+    rttoJson=toJson
+    return all1
+
 if __name__ == "__main__":
-    print http_get()
+    url = 'https://book.douban.com/tag/%E5%8F%A4%E5%85%B8%E6%96%87%E5%AD%A6?start={page}'
+    #新建csv文件用来保存数据
     fo=open('request.csv','w')
-    fo.write(http_get())
+    #对应的路径进行重写,相当与页面进行重写
+    for i in range(50):
+        #print i,'-'*5
+        t_url = url.format(page=i*20)
+        #print t_url
+        content = http_get(t_url)
+        print content
+        fo.write(content)
     fo.close()
