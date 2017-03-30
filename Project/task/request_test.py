@@ -97,7 +97,7 @@ def http_get(url):
             row_dict['name']= allBrands
             #print row_dict
             img = link.img.get('src')
-            row_dict['img'] = imgS
+            row_dict['img'] = img
             #allBrands += ' %s' %img
             row_str = json.dumps(row_dict,ensure_ascii=False,encoding='utf-8')
             all += row_str
