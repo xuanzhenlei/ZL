@@ -98,7 +98,7 @@ def http_get(url):
             row_dict['img'] = img
             #allBrands += ' %s' %img
             row_str = json.dumps(row_dict,ensure_ascii=False,encoding='utf-8')
-            all += row_str+','+'\n'
+            all += row_str+'\n'
         all1=all.replace("\\n",' ')
     return all1
 
@@ -115,3 +115,4 @@ if __name__ == "__main__":
         #print content
         fo.write(content)
     fo.close()
+
