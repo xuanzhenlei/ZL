@@ -22,6 +22,7 @@ def http_get(url):
         for link in i.find_all('li', class_="subject-item"):
             row_dict = {}
             for l in link.find_all('div',class_='info'):
+                row_dict['name']=""
                 for m in l.find_all('h2'):
                     bookname=m.get_text()
                     #去掉书名中的换行，与空格
@@ -29,12 +30,22 @@ def http_get(url):
                     bookname2 = ''.join(bookname1)
                     #bookname2=bookname1.strip()
                     row_dict['name']=bookname2
+                row_dict['author']=""
+                row_dict['trans1']=""
+                row_dict['trans2']=""
+                row_dict['work']=""
+                row_dict['publicplace']=""
+                row_dict['publicdate']=""
+                row_dict['price']=""
                 for n in l.find_all('div',class_='pub'):
                     public=n.get_text()
                     publi=public.strip()
                     public1=publi.split("/")
                     if(len(public1)==4):
                         row_dict['author']=public1[0]
+                        row_dict['trans1']=""
+                        row_dict['trans2']=""
+                        row_dict['work']=""
                         row_dict['publicplace']=public1[1]
                         row_dict['publicdate']=public1[2]
                         row_dict['price']=public1[3]
@@ -48,37 +59,46 @@ def http_get(url):
                         row_dict['price']=public1[6]
                     elif(len(public1)==5):
                         row_dict['author']=public1[0]
-                        row_dict['trans']=public1[1]
+                        row_dict['trans1']=public1[1]
+                        row_dict['trans2']=""
+                        row_dict['work']=""
                         row_dict['publicplace']=public1[2]
                         row_dict['publicdate']=public1[3]
                         row_dict['price']=public1[4]
                     elif(len(public1)==3):
+                        row_dict['author']=""
+                        row_dict['trans1']=""
+                        row_dict['trans2']=""
+                        row_dict['work']=""
                         row_dict['publicplace']=public1[0]
                         row_dict['publicdate']=public1[1]
                         row_dict['price']=public1[2]
-                    #row_dict['information']=public
+                row_dict['rating_num']=0
                 for o in l.find_all('span',class_='rating_nums'):
                     ppnum=o.get_text()
                     ppnum1=ppnum.strip()
                     row_dict['rating_num']=ppnum1
+                row_dict['counts']=0
                 for p in l.find_all('span',class_='pl'):
                     count=p.get_text()
                     coun=count.strip()
                     count1=re.sub("\D","",coun)
                     row_dict['counts']=count1
+                row_dict['introduction']=""
                 for q in l.find_all('p'):
-                    introd=q.get_text()
-                    intro=introd.strip()
-                    row_dict['introduction']=intro
+                     introd=q.get_text()
+                     intro=introd.strip()
+                     row_dict['introduction']=intro
             #allBrands = link.get_text()
             #print allBrands
             #row_dict['name']= allBrands
             #print row_dict
+            row_dict['img']=""
             img = link.img.get('src')
             row_dict['img'] = img
             #allBrands += ' %s' %img
             row_str = json.dumps(row_dict,ensure_ascii=False,encoding='utf-8')
-            all += row_str+'\n'
+            all += row_str+','+'\n'
         all1=all.replace("\\n",' ')
     return all1
 
@@ -87,11 +107,11 @@ if __name__ == "__main__":
     #新建csv文件用来保存数据
     fo=open('request1.csv','w')
     #对应的路径进行重写,相当与页面进行重写
-    for i in range(10):
+    for i in range(50):
         #print i,'-'*5
         t_url = url.format(page=i*20)
         #print t_url
         content = http_get(t_url)
-        print content
+        #print content
         fo.write(content)
     fo.close()
