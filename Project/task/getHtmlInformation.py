@@ -36,7 +36,7 @@ def http_get(url):
                 row_dict['work']=""
                 row_dict['publicplace']=""
                 row_dict['publicdate']=""
-                row_dict['price']=""
+                row_dict['price']=re.sub("\D","","")
                 for n in l.find_all('div',class_='pub'):
                     public=n.get_text()
                     publi=public.strip()
@@ -48,23 +48,23 @@ def http_get(url):
                         row_dict['work']=""
                         row_dict['publicplace']=public1[1]
                         row_dict['publicdate']=public1[2]
-                        row_dict['price']=public1[3]
+                        row_dict['price']=re.sub("\D","",public1[3])
                     elif(len(public1)==7):
                         row_dict['author']=public1[0]
                         row_dict['trans1']=public1[1]
                         row_dict['trans2']=public1[2]
-                        row_dict['work']=public1[3]
+                        row_dict['work']=public[3]
                         row_dict['publicplace']=public1[4]
                         row_dict['publicdate']=public1[5]
-                        row_dict['price']=public1[6]
+                        row_dict['price']=re.sub("\D","",public1[6])
                     elif(len(public1)==5):
                         row_dict['author']=public1[0]
                         row_dict['trans1']=public1[1]
                         row_dict['trans2']=""
                         row_dict['work']=""
                         row_dict['publicplace']=public1[2]
-                        row_dict['publicdate']=public1[3]
-                        row_dict['price']=public1[4]
+                        row_dict['publicdate']=public[3]
+                        row_dict['price']=re.sub("\D","",public1[4])
                     elif(len(public1)==3):
                         row_dict['author']=""
                         row_dict['trans1']=""
@@ -72,7 +72,7 @@ def http_get(url):
                         row_dict['work']=""
                         row_dict['publicplace']=public1[0]
                         row_dict['publicdate']=public1[1]
-                        row_dict['price']=public1[2]
+                        row_dict['price']=re.sub("\D","",public1[2])
                 row_dict['rating_num']=0
                 for o in l.find_all('span',class_='rating_nums'):
                     ppnum=o.get_text()
@@ -112,7 +112,14 @@ if __name__ == "__main__":
         t_url = url.format(page=i*20)
         #print t_url
         content = http_get(t_url)
-        #print content
+        print content
         fo.write(content)
     fo.close()
+    file = open('request1.csv','r')
+    file1=open('request1_csv.csv','w')
+    lines = file.readlines()
+    for d in lines:
+        d=eval(d)
+        file1.write('%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'%(d['name'],d['img'],d['author'],d['rating_num'],d['price'],d['work'],d['trans1'],d['trans2'],d['introduction'],d['counts'],d['publicplace'],d['publicdate']))
+    file1.close()
 
