@@ -32,17 +32,22 @@
     # fo1.close()
 
 
-
+import csv
 
 
 file = open('test111.csv','r')
 file1=open('test1.csv','w')
 lines = file.readlines()
+data=["name","img","author","rating_num","price","introduction","counts","publicplace","publicdate"]
+writer=csv.writer(file1)
+writer.writerow(data)
 for d in lines:
     d=eval(d)
     file1.write('%s,%s,%s,%s,%s,%s,%s,%s,%s\n'%(d['name'],d['img'],d['author'],d['rating_num'],d['price'],d['introduction'],d['counts'],d['publicplace'],d['publicdate']))
 file1.close()
-
+# with open('test1.csv','ab') as f:
+#     writer=csv.writer(f)
+#     writer.writerow(data)
 
 # file=open()
 # while 1:
