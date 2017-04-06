@@ -34,7 +34,7 @@ def login(req):
                 response.set_cookie('username',username,3600)
                 return response
             else:
-                return HttpResponseRedirect('/login/')
+                return render_to_response('relogin.html')
     else:
         uf = UserForm()
     return render_to_response('login.html',{'uf':uf},context_instance=RequestContext(req))
