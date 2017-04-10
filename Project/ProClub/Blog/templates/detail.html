@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{color:#efd;background:#675;padding:0 20em;margin:0}
+    </style>
+    <style type="text/css">
+        body{color:#efd;background:#675;padding:0 20em;margin:0}
+        a{font-weight:60;color:#bf8;font-size:20px;background:#675;text-decoration:none}
+      </style>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+{% extends "base.html" %}
+   {% block content%}
+    {% for post in blog_one %}
+        <p>{{post.title}}</p>
+        <p>{{post.cate}}</p>
+        <p>{{post.date}}</p>
+        <p>{{post.artical}}</p>
+        <p>{{post.img}}</p>
+        <br/><br/><br/><br/>
+        <a id="add_test" href="http://127.0.0.1:8000/">返回首页</a>
+    {% endfor%}
+   {% endblock%}
+
+</body>
+</html>

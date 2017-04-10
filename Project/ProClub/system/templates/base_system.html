@@ -1,0 +1,70 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+
+{% block menu %}
+    <ul class="sidebar-menu">
+        <li class="header">天赋技能</li>
+        {% block sidebar-menu %}
+            {% for j in main_menu %}
+                {% if j.child %}
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>{{ j.value.function_name }}</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            {% for j1 in j.child %}
+                                <li><a href="{{ j1.value.url_last }}"><i
+                                        class="fa fa-circle-o"></i> {{ j1.value.function_name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="treeview">
+                        <a href="{{ j.value.url_last }}">
+                            <i class="fa fa-dashboard"></i> <span>{{ j.value.function_name }}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endblock %}
+        <li class="header">附加技能</li>
+        {% block other-menu %}
+            {% for j in other_menu %}
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-share"></i> <span>{{ j.value.function_name }}</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        {% for j1 in j.child %}
+                            {% if j1.child %}
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o"></i> {{ j1.value.function_name }}
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                            </a>
+                            <ul class="treeview-menu">
+                                {% for j2 in j1.child %}
+                                <li><a href="{{ j2.value.url_last }}"><i class="fa fa-circle-o"></i> {{ j2.value.function_name }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                                {% else %}
+                                <li><a href="{{ j1.value.url_last }}"><i class="fa fa-circle-o"></i> {{ j1.value.function_name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        {% endblock %}
+    </ul>
+{% endblock %}
+
+

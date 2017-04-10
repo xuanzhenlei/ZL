@@ -1,0 +1,125 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}
+    用户管理
+{% endblock %}
+
+{% block pagelink %}
+    <link rel="stylesheet" href="{% static "web/plugins/bootstrap-validator/css/bootstrapValidator.min.css" %}">
+    <link rel="stylesheet" href="{% static "web/plugins/iCheck/flat/blue.css" %}">
+    <link rel="stylesheet" href="{% static "web/plugins/select2/select2.min.css" %}">
+    <style>
+        .td_checkbox {
+            width: 30px;
+        }
+
+        {#    .mailbox-messages {#}
+        {#        border-radius: 0px;#}
+        {#    }#}
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-9">
+                <div class="row">
+                    {% for j0 in jurisdiction %}
+                        <div class="col-xs-4">
+                            <div class="box box-warning box-solid mailbox-messages">
+                                <div class="box-header with-border">
+                                    <input type="checkbox" value="{{ j0.value.id }}">
+                                    <h2 class="box-title" style="margin-left: 10px">{{ j0.value.function_name }}</h2>
+                                    <!-- /.box-tools -->
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body no-padding ">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped">
+                                            <tbody>
+                                            {% for j1 in j0.child %}
+                                                <tr class="text-yellow">
+                                                    <td class="td_checkbox"><input type="checkbox" data-j0="{{ j0.value.id }}"
+                                                                                   value="{{ j1.value.id }}"></td>
+                                                    <td>{{ j1.value.function_name }}</td>
+                                                </tr>
+                                                {% for j2 in j1.child %}
+                                                    <tr>
+                                                        <td class="td_checkbox"><input type="checkbox"
+                                                                                       data-j0="{{ j0.value.id }}"
+                                                                                       data-j1="{{ j1.value.id }}"
+                                                                                       value="{{ j2.value.id }}"></td>
+                                                        <td>{{ j2.value.function_name }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        <!-- /.table -->
+                                    </div>
+                                    <!-- /.mail-box-messages -->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-xs-3" style="border-left: 1px solid #d2d6de;">
+                <form id="form_default">
+                    <div class="box box-success box-solid mailbox-messages" style="border-radius: 0px;">
+                        <div class="box-header with-border">
+                            <h2 class="box-title" style="margin-left: 10px">用户选择</h2>
+                            <!-- /.box-tools -->
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">用户</label>
+                                <select class="form-control select2" id="user_id"
+                                        name="user_id" data-bv-notempty="true">
+                                    <option value=""></option>
+                                    {% for o in users %}
+                                        <option value="{{ o.user_id }}" data-jurisdiction="{{ o.jurisdictions }}"
+                                                data-organize="{{ o.organize_name }}"
+                                                data-email="{{ o.email }}">{{ o.username }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="form-group" style="border-top: 1px solid #d2d6de; padding-top: 5px">
+                                <label for="exampleInputEmail1">核对信息</label>
+                                <div id="hedui">
+
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="padding: 10px 0 0 0">
+                                <button type="submit" class="btn btn-primary btn-flat">保存</button>
+                            </div>
+                        </div>
+
+                        <!-- /.box-body -->
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static "web/plugins/iCheck/icheck.min.js" %}"></script>
+    <script src="{% static "web/plugins/select2/select2.full.min.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-validator/js/bootstrapValidator.min.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-validator/js/language/zh_CN.js" %}"></script>
+    <script src="{% static "web/plugins/jquery-form/jquery.form.min.js" %}"></script>
+    <script>
+        var PUB_URL = {
+            'saveUrl': '{% url 'system:saveUserJurisdiction' %}'
+        }
+    </script>
+    <script src="{% static "public/js/p_bootstrap_table.js" %}"></script>
+    <script src="{% static "organize/js/userJurisdiction.js" %}"></script>
+{% endblock %}

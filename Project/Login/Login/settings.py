@@ -93,6 +93,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #template
-TEMPLATE_DIRS=(
+TEMPLATE_DIRS = (
     '/home/wood/git/ZL/Project/Login/Login_test/templates'
 )

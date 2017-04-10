@@ -1,0 +1,167 @@
+{% extends "base_system.html" %}
+{% load static %}
+
+{% block title %}
+    用户管理
+{% endblock %}
+
+{% block pagelink %}
+    <link rel="stylesheet" href="{% static "web/plugins/bootstrap-validator/css/bootstrapValidator.min.css" %}">
+    <link rel="stylesheet" href="{% static "web/plugins/bootstrap-table/bootstrap-table.min.css" %}">
+{% endblock %}
+
+{% block content %}
+    <section class="content">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    {#            <div class="box-header">#}
+                    {#              <h3 class="box-title">Data Table With Full Features</h3>#}
+                    {#            </div>#}
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div id="toolbar">
+                            <div class="form-group" style="margin-bottom: 0px">
+                                <button type="button" class="btn btn-primary btn-flat" id="table_edit_new">
+                                    <i class="glyphicon glyphicon-plus"></i>新增
+                                </button>
+                                {#                                <input type="text" class="form-control toolbar-filter" id="email" name="email"#}
+                                {#                                       placeholder="Enter email">#}
+                            </div>
+
+                        </div>
+                        <table id="boot_table"></table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+    </section>
+
+
+{% endblock %}
+
+{% block modal %}
+    <!-- Modal -->
+    <div class="modal fade" id="modal_default" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">用户编辑</h4>
+                </div>
+
+                <form id="form_default" role="form">
+                    <input type="hidden" id="key_id" name="key_id">
+                    <div class="modal-body">
+                        <!-- 执行结果提示 -->
+                        <div class="alert alert-danger alert-dismissible" style="margin-bottom: 15px">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h4><i class="icon fa fa-ban"></i> <span class="message">系统错误，请截图给研发！</span></h4>
+                        </div>
+                        <div class="alert alert-warning alert-dismissible" style="margin-bottom: 15px">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h4><i class="icon fa fa-warning"></i> <span class="message">警告！</span></h4>
+                        </div>
+                        <div class="alert alert-success alert-dismissible" style="margin-bottom: 15px">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            <h4><i class="icon fa fa-check"></i> <span class="message">保存成功！</span></h4>
+                        </div>
+                        <!-- 执行结果提示 -->
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">隶属于</label>
+                            <select type="text" class="form-control" id="parent_tree_id"
+                                    placeholder="隶属于（部门，组等）" name="parent_tree_id" data-bv-notempty="true">
+                                <option value="0">无</option>
+                                {% for o in highest %}
+                                    <option value="{{ o.id }}">{{ o.organize_name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">姓名</label>
+                                    <input type="text" class="form-control" id="username"
+                                           placeholder="姓名" name="username" data-bv-notempty="true">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">邮箱</label>
+                                    <input type="email" class="form-control" id="email"
+                                           placeholder="邮箱" name="email" data-bv-notempty="true"
+                                           pattern=".*@starmerx.com"
+                                           data-bv-regexp-message="请填写公司内部邮箱！">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="is_staff">是否管理员</label>
+                                    <div class="form-control">
+                                        <label class="radio-inline">
+                                            <input type="radio" name="is_staff" id="is_staff1"
+                                                   value="1"> 是
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="is_staff" id="is_staff0"
+                                                   value="0"> 否
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">职位</label>
+                                    <input type="text" class="form-control" id="position"
+                                           placeholder="职位" name="position" data-bv-notempty="true">
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>密码（如果不修改密码，请不要填写）</label>
+                                    <input type="text" class="form-control" id="password"
+                                           placeholder="密码" name="password">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary btn-flat">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static "web/plugins/bootstrap-validator/js/bootstrapValidator.min.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-validator/js/language/zh_CN.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-table/bootstrap-table.min.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-table/bootstrap-table-zh-CN.min.js" %}"></script>
+    <script src="{% static "web/plugins/jquery-form/jquery.form.min.js" %}"></script>
+    <script>
+        var PUB_URL = {
+            'dataUrl': '{% url 'system:dataSysUser' %}',
+            'saveUrl': '{% url 'system:saveSysUser' %}',
+            'delUrl': '{% url 'system:delSysUser' %}'
+        }
+    </script>
+    <script src="{% static "public/js/p_bootstrap_table.js" %}"></script>
+    <script src="{% static "organize/js/sysUserBoottable.js" %}"></script>
+    <script src="{% static "organize/js/sysUser.js" %}"></script>
+{% endblock %}

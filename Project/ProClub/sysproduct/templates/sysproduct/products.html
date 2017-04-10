@@ -1,0 +1,55 @@
+{% extends 'sysproduct/index.html' %}
+{% load static %}
+
+{% block pagelink %}
+    <link rel="stylesheet" href="{% static "web/plugins/bootstrap-table/bootstrap-table.min.css" %}">
+{% endblock %}
+{% block content %}
+        <section class="content">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        {#            <div class="box-header">#}
+                        {#              <h3 class="box-title">Data Table With Full Features</h3>#}
+                        {#            </div>#}
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div id="toolbar">
+                                {% csrf_token %}
+                                <div class="form-group" style="margin-bottom: 0px">
+                                    <button type="button" class="btn btn-primary btn-flat" data-toggle="modal"
+                                            data-target="#myModal">
+                                        <i class="glyphicon glyphicon-plus"></i>新增
+                                    </button>
+                                    <input type="text" class="form-control toolbar-filter" id="email" name="email"
+                                           placeholder="Enter email">
+                                </div>
+
+                            </div>
+                            <table id="boot_table"></table>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </section>
+
+{% endblock %}
+
+{% block script %}
+
+    <script src="{% static "web/plugins/bootstrap-table/bootstrap-table.min.js" %}"></script>
+    <script src="{% static "web/plugins/bootstrap-table/bootstrap-table-zh-CN.min.js" %}"></script>
+    <script>
+        var PUB_URL = {
+            'products': '{% url 'products' %}',
+        }
+        $("input[name='csrfmiddlewaretoken']").attr('class','toolbar-filter');
+        console.log($("input[name='csrfmiddlewaretoken']").attr('class'));
+    </script>
+    <script src="{% static "public/js/p_bootstrap_table.js" %}"></script>
+    <script src="{% static "sproduct/js/products.js" %}"></script>
+{% endblock %}
