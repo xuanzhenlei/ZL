@@ -30,9 +30,10 @@ def add(req):
     else:
         uf=ComForm()
         return render_to_response('add.html',{'uf':uf})
-def detail(request):
-    blog_id=request.GET.get('usrfull_id')
-    print blog_id
 
-    blog_one=blogs.objects.filter(id=1)
+def detail(request):
+    id = request.GET.get('id')
+    blog_one=blogs.objects.filter(id=id)
     return render_to_response('detail.html',{'blog_one':blog_one})
+
+

@@ -2,22 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="http://common.cnblogs.com/script/jquery.js"></script>
+    <!--<script type="text/javascript" src="http://common.cnblogs.com/script/jquery.js"></script>-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <style>
-        #test_a{font-weight:30;color:#bf8;font-size:20px;background:#675;text-decoration:none;height:20px}
+        .test_a{font-weight:30;color:#bf8;font-size:20px;background:#675;text-decoration:none;height:20px}
         #test_h3{font-size:15px}
     </style>
     <title>Blogs</title>
+    <!--这是ajax通过POST进行数据传递-->
+    <!--<script>-->
+        <!--function SubmitForm(id){-->
+            <!--var params = {}-->
+            <!--params['id'] = id-->
+
+            <!--$.ajax({-->
+                <!--url:'/detail/',-->
+                <!--type:'POST',-->
+                <!--data:params,-->
+                <!--success:function(data){-->
+                <!--}-->
+            <!--})-->
+        <!--}-->
+    <!--</script>-->
 </head>
 <body>
 {% extends "base.html" %}
    {% block content%}
        {% for post in blogs_list %}
-       <input id="usrfull_id" type="hidden" value="{{post.id}}"/>
-       <div>
+       <br/>
+       <br/>
+       <hr style="margin:0px;height:1px;border:0px;background-color:#D5D5D5;color:#D5D5D5"/>
+       <br/>
+       <br/>
+       <br/>
+       <div id="blogs_list">
+           <!--<input id="usrfull_id" type="hidden" value="{{post.id}}"/>-->
            <table>
                <tr>
-                   <td><a id="test_a" href="http://127.0.0.1:8000/detail/">{{ post.title }}</a></td>
+                   <td><a id="{{post.id}}" class="test_a" href="/detail/?id={{post.id}}">{{ post.title }}</a></td>
                    <td><h3>{{ post.date }}</h3></td>
                </tr>
                <tr>
@@ -28,11 +50,8 @@
                </tr>
            </table>
        </div>
-       <hr style="margin:0px;height:1px;border:0px;background-color:#D5D5D5;color:#D5D5D5"/>
-       <br/>
-       <br/>
-       <br/>
         {% endfor%}
    {% endblock%}
 </body>
+
 </html>
