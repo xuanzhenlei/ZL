@@ -28,10 +28,9 @@ def add(req):
             cate = uf.cleaned_data['cate']
             artical = uf.cleaned_data['artical']
             img=uf.cleaned_data['img']
-            print img
             blogs.objects.create(title=title,cate=cate,artical=artical,img=img)
             return render_to_response('add_success.html')
-            #return HttpResponse("success")
+            #return HttpResponse("Save Successful!")
     else:
         uf=ComForm()
         return render_to_response('add.html',{'uf':uf})
