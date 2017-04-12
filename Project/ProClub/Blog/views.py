@@ -9,10 +9,10 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 class ComForm(forms.Form):
-    title=forms.CharField(label='标题',max_length=200)
-    cate=forms.CharField(label='分类',max_length=50)
+    title=forms.CharField(label='Title',max_length=200)
+    cate=forms.CharField(label='Cate',max_length=50)
     artical=forms.CharField(widget=forms.Textarea)
-    img=forms.ImageField(label='图片')
+    img=forms.ImageField(label='Image')
 def index(request):
     blogs_list=blogs.objects.all()
     return render_to_response('index.html',{'blogs_list':blogs_list})
