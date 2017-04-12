@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fac9696c-c9f6-4ce0-8f65-7db5ffd1b06d" name="Default" comment="">
+    <list default="true" id="fac9696c-c9f6-4ce0-8f65-7db5ffd1b06d" name="Default" comment="简单的登录注册，数据保存到数据库">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Login/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Project/Login/.idea/workspace.xml" />
+    </list>
+    <list id="0500a75c-3563-4368-8c07-a92afbc297a4" name="New changelist" comment="New changelist">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project/Oder/__init__.py" afterPath="$PROJECT_DIR$/Project/Oder/__init__.py" />
     </list>
     <ignored path="ZL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,18 +25,77 @@
     <favorites_list name="ZL" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project/Oder/__init__.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="getHtmlInformation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/task/getHtmlInformation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9082569">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5981735">
+              <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+              <folding>
+                <element signature="e#42#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request1.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/task/request1.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="request1_csv.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/task/request1_csv.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="json_csv_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/task/json_csv_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="16" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test111.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/task/test111.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/task/test1.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,14 +104,62 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Project/Oder/__init__.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/animal.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/form.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/server.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/html.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/login.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/root.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/urllib.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/xml.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/MD5.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/csv.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/csvtest.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/csv_read.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/xlrd_test.py" />
+        <option value="$PROJECT_DIR$/dbConnecttion/MySqlConn.py" />
+        <option value="$PROJECT_DIR$/Project/Oder/csv3.csv" />
+        <option value="$PROJECT_DIR$/Project/task/ppproject.csv" />
+        <option value="$PROJECT_DIR$/Project/Oder/csv1.csv" />
+        <option value="$PROJECT_DIR$/Project/Oder/csv2.csv" />
+        <option value="$PROJECT_DIR$/Project/Oder/test.py" />
+        <option value="$PROJECT_DIR$/Project/task/hebing.py" />
+        <option value="$PROJECT_DIR$/Project/task/str2arr.py" />
+        <option value="$PROJECT_DIR$/Project/AbstractFactory/test.py" />
+        <option value="$PROJECT_DIR$/Project/AbstractFactory/1.py" />
+        <option value="$PROJECT_DIR$/Project/task/request_test.py" />
+        <option value="$PROJECT_DIR$/Project/task/2.py" />
+        <option value="$PROJECT_DIR$/Project/task/datacombine_test.py" />
+        <option value="$PROJECT_DIR$/Project/task/1.py" />
+        <option value="$PROJECT_DIR$/Project/task/request.csv" />
+        <option value="$PROJECT_DIR$/Project/task/test111.csv" />
+        <option value="$PROJECT_DIR$/Project/task/request1.csv" />
+        <option value="$PROJECT_DIR$/Project/task/json_csv_test.py" />
+        <option value="$PROJECT_DIR$/Project/task/getHtmlInformation.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="767" />
-    <option name="y" value="149" />
-    <option name="width" value="1440" />
-    <option name="height" value="792" />
+    <option name="x" value="511" />
+    <option name="y" value="108" />
+    <option name="width" value="1286" />
+    <option name="height" value="813" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -77,8 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -96,30 +203,128 @@
               <option name="myItemId" value="ZL" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ZL" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Project/Login" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.__init__">
-    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.1 (1)">
+    <configuration default="false" name="request_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/Oder" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/task" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ZL" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/Oder/__init__.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/task/request_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="str2arr" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZL" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/task/str2arr.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZL" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/task/datacombine_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="1 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZL" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/task/getHtmlInformation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="json_csv_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Project/task" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ZL" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project/task/json_csv_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -246,22 +451,31 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.request_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.str2arr" />
+      <item index="2" class="java.lang.String" itemvalue="Python.1" />
+      <item index="3" class="java.lang.String" itemvalue="Python.1 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.json_csv_test" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.1 (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.json_csv_test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.1" />
+        <item index="3" class="java.lang.String" itemvalue="Python.request_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.str2arr" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fac9696c-c9f6-4ce0-8f65-7db5ffd1b06d" name="Default" comment="" />
+      <changelist id="0500a75c-3563-4368-8c07-a92afbc297a4" name="New changelist" comment="" />
       <created>1490171990245</created>
       <option name="number" value="Default" />
       <updated>1490171990245</updated>
@@ -272,52 +486,659 @@
       <option name="project" value="LOCAL" />
       <updated>1490172961489</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试多态，继承">
+      <created>1490263418703</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1490263418703</updated>
+    </task>
+    <task id="LOCAL-00003" summary="切片，迭代，列表练习">
+      <created>1490322050317</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1490322050317</updated>
+    </task>
+    <task id="LOCAL-00004" summary="用python写网页登录">
+      <created>1490324891061</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1490324891061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="用python修改登录">
+      <created>1490332543165</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1490332543165</updated>
+    </task>
+    <task id="LOCAL-00006" summary="MD5测试">
+      <created>1490350167422</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1490350167422</updated>
+    </task>
+    <task id="LOCAL-00007" summary="csv测试">
+      <created>1490350227546</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1490350227546</updated>
+    </task>
+    <task id="LOCAL-00008" summary="csv测试&#10;html解析测试">
+      <created>1490350575667</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1490350575667</updated>
+    </task>
+    <task id="LOCAL-00009" summary="csv调试">
+      <created>1490406584673</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1490406584673</updated>
+    </task>
+    <task id="LOCAL-00010" summary="csv调试完成">
+      <created>1490406920369</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1490406920369</updated>
+    </task>
+    <task id="LOCAL-00011" summary="csv读取调试">
+      <created>1490409080661</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1490409080661</updated>
+    </task>
+    <task id="LOCAL-00012" summary="xlrd测试">
+      <created>1490432674222</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1490432674222</updated>
+    </task>
+    <task id="LOCAL-00013" summary="csv进行数据合并的测试">
+      <created>1490611988233</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1490611988233</updated>
+    </task>
+    <task id="LOCAL-00014" summary="csv数据成功成功合并">
+      <created>1490612084734</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490612084734</updated>
+    </task>
+    <task id="LOCAL-00015" summary="csv数据合并测试结果">
+      <created>1490612128808</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1490612128808</updated>
+    </task>
+    <task id="LOCAL-00016" summary="request获取网页数据，提取有用信息，并以json格式保存——爬虫">
+      <created>1490685490895</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1490685490895</updated>
+    </task>
+    <task id="LOCAL-00017" summary="字符串转化为数组">
+      <created>1490756281940</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1490756281940</updated>
+    </task>
+    <task id="LOCAL-00018" summary="测试其他函数">
+      <created>1490756405953</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1490756405953</updated>
+    </task>
+    <task id="LOCAL-00019" summary="数据切割，数据组合测试">
+      <created>1490784792649</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1490784792649</updated>
+    </task>
+    <task id="LOCAL-00020" summary="json格式转化">
+      <created>1490835675170</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1490835675170</updated>
+    </task>
+    <task id="LOCAL-00021" summary="字符串转化为数组">
+      <created>1490835697666</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1490835697666</updated>
+    </task>
+    <task id="LOCAL-00022" summary="网页抓取，完整代码">
+      <created>1490854768516</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1490854768516</updated>
+    </task>
+    <task id="LOCAL-00023" summary="验证各种小函数">
+      <created>1490854825583</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1490854825583</updated>
+    </task>
+    <task id="LOCAL-00024" summary="网页抓取修改前&#10;测试数据">
+      <created>1490854866023</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1490854866023</updated>
+    </task>
+    <task id="LOCAL-00025" summary="没有数据的时候对应key显示为空">
+      <created>1490947578960</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1490947578960</updated>
+    </task>
+    <task id="LOCAL-00026" summary="测试数据能到处csv格式">
+      <created>1490955068079</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1490955068079</updated>
+    </task>
+    <task id="LOCAL-00027" summary="进一步修改，使得显示全部key，没有value的就显示为空">
+      <created>1490955116400</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1490955116400</updated>
+    </task>
+    <task id="LOCAL-00028" summary="字典格式数据导出为csv文件的测试数据">
+      <created>1490955190441</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1490955190441</updated>
+    </task>
+    <task id="LOCAL-00029" summary="将爬虫导出的json数据转化为csv格式的文件">
+      <created>1491181792514</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1491181792514</updated>
+    </task>
+    <task id="LOCAL-00030" summary="删除测试数据request.csv">
+      <created>1491181877138</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1491181877138</updated>
+    </task>
+    <task id="LOCAL-00031" summary="测试并且为csv添加标题行，测试通过">
+      <created>1491185922011</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1491185922011</updated>
+    </task>
+    <task id="LOCAL-00032" summary="简单的登录注册，数据保存到数据库">
+      <created>1491451270646</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1491451270646</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修改登录失败后的返回页面">
+      <created>1491473155577</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1491473155577</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="767" y="149" width="1440" height="792" extended-state="0" />
-    <editor active="true" />
+    <frame x="511" y="108" width="1286" height="813" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32805756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32799146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2858274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29363784" sideWeight="0.50884247" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26427406" sideWeight="0.49356914" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32692307" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39423078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38333333" sideWeight="0.49115756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="init&#10;" />
+    <MESSAGE value="csv调试" />
+    <MESSAGE value="csv调试完成" />
+    <MESSAGE value="csv读取调试" />
+    <MESSAGE value="xlrd测试" />
+    <MESSAGE value="csv进行数据合并的测试" />
+    <MESSAGE value="csv数据成功成功合并" />
+    <MESSAGE value="csv数据合并测试结果" />
+    <MESSAGE value="request获取网页数据，提取有用信息，并以json格式保存——爬虫" />
+    <MESSAGE value="测试其他函数" />
+    <MESSAGE value="数据切割，数据组合测试" />
+    <MESSAGE value="json格式转化" />
+    <MESSAGE value="字符串转化为数组" />
+    <MESSAGE value="网页抓取，完整代码" />
+    <MESSAGE value="验证各种小函数" />
+    <MESSAGE value="网页抓取修改前&#10;测试数据" />
+    <MESSAGE value="没有数据的时候对应key显示为空" />
+    <MESSAGE value="测试数据能到处csv格式" />
+    <MESSAGE value="进一步修改，使得显示全部key，没有value的就显示为空" />
+    <MESSAGE value="字典格式数据导出为csv文件的测试数据" />
+    <MESSAGE value="将爬虫导出的json数据转化为csv格式的文件" />
+    <MESSAGE value="删除测试数据request.csv" />
+    <MESSAGE value="测试并且为csv添加标题行，测试通过" />
+    <MESSAGE value="修改登录失败返回页面" />
+    <MESSAGE value="简单的登录注册，数据保存到数据库" />
+    <MESSAGE value="修改登录失败后的返回页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改登录失败后的返回页面" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Project/Oder/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9082569">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/animal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/BaseHTTPServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/SocketServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="416" column="0" selection-start-line="416" selection-start-column="0" selection-end-line="416" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="691" column="0" selection-start-line="691" selection-start-column="0" selection-end-line="691" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/socket.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/HTMLParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/MD5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22277227">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/xlrd/book.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33168316">
+          <caret line="1223" column="0" selection-start-line="1223" selection-start-column="0" selection-end-line="1223" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/xlrd/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.47029704">
+          <caret line="440" column="0" selection-start-line="440" selection-start-column="0" selection-end-line="440" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/xlrd_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/csvtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/csv_read.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27648115">
+          <caret line="1975" column="0" selection-start-line="1975" selection-start-column="0" selection-end-line="1975" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/generic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27648115">
+          <caret line="1090" column="0" selection-start-line="1090" selection-start-column="0" selection-end-line="1090" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27648115">
+          <caret line="3210" column="0" selection-start-line="3210" selection-start-column="0" selection-end-line="3210" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/core/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27648115">
+          <caret line="1758" column="0" selection-start-line="1758" selection-start-column="0" selection-end-line="1758" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/csv2.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/csv1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3231598">
+          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="504" column="0" selection-start-line="504" selection-start-column="0" selection-end-line="504" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/pandas/tools/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="156" column="8" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/Oder/csv3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="381" column="0" selection-start-line="381" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1247972723/__builtin__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="414" column="4" selection-start-line="414" selection-start-column="4" selection-end-line="414" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1247972723/gtk/_gtk/Label.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="267" column="8" selection-start-line="267" selection-start-column="8" selection-end-line="267" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/bs4/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.909449">
+          <caret line="86" column="8" selection-start-line="86" selection-start-column="8" selection-end-line="86" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32677165">
+          <caret line="1797" column="0" selection-start-line="1797" selection-start-column="0" selection-end-line="1797" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/sku有offer但是没采购过的数据_v3.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="65" selection-start-line="0" selection-start-column="65" selection-end-line="0" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/str2arr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26666668">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/bs4/element.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033210333">
+          <caret line="1272" column="8" selection-start-line="1272" selection-start-column="8" selection-end-line="1272" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/AbstractFactory/test_compay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/AbstractFactory/test_pet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/AbstractFactory/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/AbstractFactory/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="197" column="4" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6441379">
+          <caret line="186" column="61" selection-start-line="186" selection-start-column="61" selection-end-line="186" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/datacombine_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26571113">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="293" column="4" selection-start-line="293" selection-start-column="4" selection-end-line="293" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/request_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="36" selection-start-line="100" selection-start-column="36" selection-end-line="100" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/json_csv_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/hebing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="16" selection-start-line="40" selection-start-column="6" selection-end-line="42" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/ppproject.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1247972723/_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="982" column="8" selection-start-line="982" selection-start-column="8" selection-end-line="982" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/test111.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/test1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/request1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="198" column="0" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/json_csv_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="16" selection-start-line="40" selection-start-column="0" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/request1_csv.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/task/getHtmlInformation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5981735">
+          <caret line="103" column="15" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="15" />
+          <folding>
+            <element signature="e#42#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

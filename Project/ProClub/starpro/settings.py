@@ -167,3 +167,5 @@ STATICFILES_DIRS = (
     ('upload',os.path.join(STATIC_ROOT,'upload').replace('\\','/') ),
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR,'Blog')
+MEDIA_URL = '/Blog/pic/'
