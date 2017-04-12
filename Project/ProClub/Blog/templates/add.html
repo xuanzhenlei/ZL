@@ -7,6 +7,7 @@
         body{color:#efd;background:#675;padding:0 20em;margin:0}
         a{font-weight:60;color:#bf8;font-size:20px;background:#675;text-decoration:none}
         textarea{ resize:none; width:500px; height:300px; vertical-align:top}
+        #ipt_sty{font-weight:60;color:#bf7;font-size:20px;background:#675;border:none}
       </style>
     <title>Add Blog</title>
 </head>
@@ -19,7 +20,9 @@
     </table>
     <form method = 'post' enctype="multipart/form-data">
         {{uf.as_p}}
-        <input type="submit" value = "Submit" />
+        <input id="ipt_sty" type="submit" value = "Submit" />
+        <br/>
+        <br/>
         <a id='test_add' href="http://127.0.0.1:8000/">Return Home Page</a>
     </form>
 </body>
