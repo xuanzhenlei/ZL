@@ -147,6 +147,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+
 LUCENE_MAIN_PATH = os.path.join(BASE_DIR,'lucenedata')
 if os.path.exists(LUCENE_MAIN_PATH):
     pass
