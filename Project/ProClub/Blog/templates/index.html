@@ -32,9 +32,7 @@
        <br/>
        <br/>
        <hr style="margin:0px;height:1px;border:0px;background-color:#D5D5D5;color:#D5D5D5"/>
-       <br/>
-       <br/>
-       <br/>
+       <br/><br/><br/>
        <div id="blogs_list">
            <!--<input id="usrfull_id" type="hidden" value="{{post.id}}"/>-->
            <table>
@@ -49,8 +47,18 @@
                </tr>
            </table>
        </div>
-        {% endfor%}
+       {% endfor%}
+       <br/>
+       {% ifnotequal curpage 1%}
+           <a href="?curpage={{curpage}}&&allpage={{allpage}}&&pagetype=pageup" style="font-weight:10;color:#bf8;font-size:15px;background:#675;text-decoration:none;height:10px">上一页</a>
+       {% endifnotequal %}
+           第{{curpage}}/{{allpage}}页
+       {% ifnotequal curpage allpage %}
+           <a href="?curpage={{curpage}}&&allpage={{allpage}}&&pagetype=pagedown" style="font-weight:10;color:#bf8;font-size:15px;background:#675;text-decoration:none;height:10px">下一页</a>
+       {% endifnotequal %}
    {% endblock%}
+
+
 </body>
 
 </html>

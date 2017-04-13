@@ -13,9 +13,34 @@ class ComForm(forms.Form):
     cate=forms.CharField(label='分类',max_length=50)
     artical=forms.CharField(label='文章',widget=forms.Textarea)
     img=forms.ImageField(label='图片')
+one_page_of_data=3
 def index(request):
-    blogs_list=blogs.objects.all()
-    return render_to_response('index.html',{'blogs_list':blogs_list})
+    try:
+        curpage=int(request.GET.get('curpage','1'))
+        allpage=int(request.GET.get('allpage','1'))
+        pagetype=str(request.GET.get('pagetype',''))
+    except ValueError:
+        curpage=1
+        allpage=1
+        pagetype=''
+    if pagetype=='pagedown':
+        curpage+=1
+    elif pagetype=='pageup':
+        curpage-=1
+
+    start=(curpage-1)*one_page_of_data
+    end=start+one_page_of_data
+    blogs_list=blogs.objects.all()[start:end]
+
+    if curpage==1 and allpage==1:
+        alllpostcounts=blogs.objects.count()
+        allpage=alllpostcounts/one_page_of_data
+        remainpost=alllpostcounts%one_page_of_data
+        if remainpost > 0:
+            allpage+=1
+    return render_to_response('index.html',{'blogs_list':blogs_list,'allpage':allpage,'curpage':curpage})
+    # blogs_list=blogs.objects.all()
+    # return render_to_response('index.html',{'blogs_list':blogs_list})
 
 @csrf_exempt
 def add(req):
