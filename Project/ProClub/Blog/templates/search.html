@@ -20,7 +20,7 @@
         </tr>
     </table>
     {% block content%}
-    {% for post in blogs_lists %}
+    {% for post in blogs_list %}
     <br/>
     <br/>
     <hr style="margin:0px;height:1px;border:0px;background-color:#D5D5D5;color:#D5D5D5"/>
@@ -41,6 +41,15 @@
     </div>
     {% endfor %}
     <br/>
+    <div>
+    {% ifnotequal curpage 1%}
+           <a href="/search/?curpage={{curpage}}&&allpage={{allpage}}&&pagetype=pageup" style="font-weight:10;color:#bf8;font-size:15px;background:#675;text-decoration:none;height:10px">上一页</a>
+       {% endifnotequal %}
+           第{{curpage}}/{{allpage}}页
+       {% ifnotequal curpage allpage %}
+           <a href="/search/?curpage={{curpage}}&&allpage={{allpage}}&&pagetype=pagedown" style="font-weight:10;color:#bf8;font-size:15px;background:#675;text-decoration:none;height:10px">下一页</a>
+       {% endifnotequal %}
+        </div>
     {% endblock %}
 
     <a id="add_test1" href="/">Return Home Page</a>

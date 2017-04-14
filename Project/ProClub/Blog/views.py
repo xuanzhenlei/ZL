@@ -66,6 +66,32 @@ def detail(request):
 
 def search(request):
     text=request.GET.get('input')
-    blogs_lists=blogs.objects.filter(title__contains="%s"%text)
-    return render_to_response('search.html',{'blogs_lists':blogs_lists})
+    try:
+        curpage=int(request.GET.get('curpage','1'))
+        allpage=int(request.GET.get('allpage','1'))
+        pagetype=str(request.GET.get('pagetype',''))
+    except ValueError:
+        curpage=1
+        allpage=1
+        pagetype=''
+    if pagetype=='pagedown':
+        curpage += 1
+    elif pagetype=='pageup':
+        curpage -= 1
+
+    start=(curpage-1)*one_page_of_data
+    end=start+one_page_of_data
+    # blogs_lists=blogs.objects.all()[start:end]
+    all_blogs_lists = blogs.objects.filter(title__contains="%s"%text)
+    blogs_lists = all_blogs_lists[start:end]
+    if curpage==1 and allpage==1:
+        alllpostcounts=all_blogs_lists.count()
+        allpage=alllpostcounts/one_page_of_data
+        remainpost=alllpostcounts%one_page_of_data
+        if remainpost > 0:
+            allpage+=1
+    return render_to_response('search.html',{'blogs_list':blogs_lists,'allpage':allpage,'curpage':curpage})
+    # text=request.GET.get('input')
+    # blogs_lists=blogs.objects.filter(title__contains="%s"%text)
+    # return render_to_response('search.html',{'blogs_lists':blogs_lists})
 
