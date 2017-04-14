@@ -7,7 +7,6 @@ from django import forms
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
-
 class ComForm(forms.Form):
     title=forms.CharField(label='标题',max_length=200)
     cate=forms.CharField(label='分类',max_length=50)
@@ -68,8 +67,5 @@ def detail(request):
 def search(request):
     text=request.GET.get('input')
     blogs_lists=blogs.objects.filter(title__contains="%s"%text)
-    #blogs_lists=blogs.objects.filter(title__contains="第")
     return render_to_response('search.html',{'blogs_lists':blogs_lists})
-
-
 
