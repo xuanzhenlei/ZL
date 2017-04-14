@@ -65,7 +65,11 @@ def detail(request):
     blog_one=blogs.objects.filter(id=id)
     return render_to_response('detail.html',{'blog_one':blog_one})
 
-
+def search(request):
+    text=request.GET.get('input')
+    blogs_lists=blogs.objects.filter(title__contains="%s"%text)
+    #blogs_lists=blogs.objects.filter(title__contains="第")
+    return render_to_response('search.html',{'blogs_lists':blogs_lists})
 
 
 

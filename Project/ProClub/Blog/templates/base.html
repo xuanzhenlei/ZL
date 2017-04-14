@@ -2,24 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<style type="text/css">
+    <style type="text/css">
         body{color:#efd;background:#675;padding:0 20em;margin:0}
         a{font-weight:700;color:#bf8;padding:2em 1em;font-size:40px;background:#675;text-decoration:none}
         #test_a1{font-weight:30;color:#bf8;font-size:20px;background:#675;text-decoration:none;height:20px}
         h2{color:#bf8;border-top:1px dotted #fff;margin-top:2em}
+        #input{width:250px}
+        .button{background:#675;color:white;border:none;font-size:15px}
         <!--p{margin:1em 0}-->
-      </style>
-
-      <body>
-      <table>
-          <tr>
-              <td style="height:10em"><a href="/">Blog</a></td>
-              <td><h3>Blog is a life style!</h3></td>
-              <!--<td><input type="button" value="上传" style="background:#675;font-size:15px;border:none;margin-left:450px;color:#bf8"/></td>-->
-              <td><a id="test_a1" href="/add/">Submit</a></td>
-          </tr>
-      </table>
-      {% block content %}
-      {% endblock %}
-      </body>
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <title>Blogs</title>
+    <script>
+        function Getext(){
+            var val = $("#input").val()
+            href = '/search/?input='+val
+            $('#sreach_url').attr('href',href)
+        }
+    </script>
+    <body>
+        <table>
+            <tr>
+                <td style="height:10em"><a href="/">Blog</a></td>
+                <td><h3>Blog is a life style!</h3></td>
+                <!--<td><input type="button" value="上传" style="background:#675;font-size:15px;border:none;margin-left:450px;color:#bf8"/></td>-->
+            </tr>
+            <tr>
+                <td><a id="test_a1" href="/add/">Submit</a></td>
+                <td>
+                    <div class="box">
+                        <span class="span1">
+                            <input type="text" id="input" placeholder="请输入你要查找的博客名称">
+                        </span>
+                        <span class="span2">
+                            <a id="sreach_url" class="button" onclick="Getext()">搜索</a>
+                        </span>
+                    </div>
+              </td>
+            </tr>
+        </table>
+        {% block content %}
+        {% endblock %}
+    </body>
 </html>
