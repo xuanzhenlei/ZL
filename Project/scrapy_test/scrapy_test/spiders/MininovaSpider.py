@@ -16,6 +16,7 @@ class MininovaSpider(CrawlSpider):
         torrent = TorrentItem()
         torrent['url'] = response.url
         torrent['name'] = response.xpath("//h1/text()").extract()
-        torrent['description'] = response.xpath("//div[@id='container']/p[2]/text()").extract()
+        torrent['description'] = response.xpath("//div[@id='container']/p[2]/text()").re(r'').extract()
         # torrent['size'] = response.xpath("//div[@id='specifications']/p[2]/text()[2]").extract()
+        torrent['test']=response.css('title::text').extract()
         return torrent

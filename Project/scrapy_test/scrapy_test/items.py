@@ -12,4 +12,5 @@ class TorrentItem(scrapy.Item):
     url = scrapy.Field()
     name = scrapy.Field()
     description = scrapy.Field()
+    test=scrapy.Field()
     # size = scrapy.Field()
