@@ -24,19 +24,24 @@ class EbaySpider(CrawlSpider):
         for info in infos:
             Ebay = EbaySpiderItem()
             title1 = info.xpath('h3/a/text()').extract()[0]
-            price = info.xpath('ul[1]/li[1]/span/text()').extract()[1]
+            price1 = info.xpath('ul[1]/li[1]/span/text()').extract()[1]
             currency = info.xpath('ul[1]/li[1]/span/b/text()').extract()[0]
-            watching = info.xpath('ul[1]/li[@class="lvextras"]/div/div/text()').extract()
+            watching1 = info.xpath('ul[1]/li[@class="lvextras"]/div/div/text()').extract()
             appraisal_index = info.xpath('div[2]/a[2]/text()').extract()
 
             title = title1.replace("\n", "").replace("\r", "").replace("\t", "")
             # 获取的watching为list,将list转化为string,去除\n\t,以字符串进行显示
-            watching1 = ''.join(watching)
-            watching2 = watching1.replace("\n", "").replace("\t", "")
+            watching2 = ''.join(watching1)
+            watching = watching2.replace("\n", "").replace("\t", "")
+            price=price1.replace(",","")
+            if appraisal_index:
+                pass
+            else:
+                appraisal_index=[" "]
 
             Ebay['title'] = title
             Ebay['price'] = price
             Ebay['currency'] = currency
-            Ebay['watching'] = watching2
+            Ebay['watching'] = watching
             Ebay['appraisal_index'] = appraisal_index
             yield Ebay
