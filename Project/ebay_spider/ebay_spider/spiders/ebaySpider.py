@@ -14,6 +14,7 @@ from ebay_spider.items import EbaySpiderItem
 
 class EbaySpider(CrawlSpider):
     name = 'ebay'
+    allowed_domains='ebay.com'
     start_urls = [
         'http://www.ebay.com/sch/Air-Guns-Slingshots/178886/i.html?LH_ItemCondition=3&LH_BIN=1&LH_RPA=1&_udlo=&_udhi=&LH_LocatedIn=1']
 
@@ -37,7 +38,7 @@ class EbaySpider(CrawlSpider):
             if appraisal_index:
                 pass
             else:
-                appraisal_index=[" "]
+                appraisal_index=" "
 
             Ebay['title'] = title
             Ebay['price'] = price
