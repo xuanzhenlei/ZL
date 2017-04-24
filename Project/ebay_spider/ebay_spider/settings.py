@@ -68,6 +68,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     #'ebay_spider.pipelines.EbaySpiderPipeline': 300,
     'ebay_spider.pipelines.MySQLStorePipeline':300,
+    'ebay_spider.pipelines.JsonWithEncodingEbayPipeline':300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

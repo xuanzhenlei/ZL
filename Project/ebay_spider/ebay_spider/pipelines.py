@@ -14,9 +14,10 @@ from scrapy import log
 from twisted.enterprise import adbapi
 import MySQLdb
 import MySQLdb.cursors
-from .items import EbaySpiderItem
+import json
+import codecs
 
-
+#存入数据库
 class MySQLStorePipeline(object):
     """docstring for MySQLstor"""
 
@@ -52,11 +53,16 @@ class MySQLStorePipeline(object):
         #         tx.execute("insert into ebay_spider values(%s,%s,%s,%s,%s)", (item['title'], item['price'], item['currency'], item['watching'],item['appraisal_index']))
         # ===========================================================================================
         if item.get('title'):
-            # tx.execute("select * from ebay_spider where title='%s'", item['title'])
-            #
-            # result = tx.fetchone()
-            # if result:
-            #     pass
-            # else:
             tx.execute("insert into ebay_spider values(%s,%s,%s,%s,%s)", (
                 item['title'], item['price'], item['currency'], item['watching'], item['appraisal_index']))
+
+#存入json文件
+class JsonWithEncodingEbayPipeline(object):
+    def __init__(self):
+        self.file = codecs.open('ebay.json', 'w', encoding='utf-8')
+    def process_item(self, item, spider):
+        line = json.dumps(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(line)
+        return item
+    def spider_closed(self, spider):
+        self.file.close()
