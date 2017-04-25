@@ -1,0 +1,4 @@
+2016-01-25 09:42:58,120 8948 ERROR logger2 /home/tianhu/workspacenew/www.ebay.com_2.0/start.py <module> 153 EOF when reading a line
+2016-01-25 10:13:30,664 10590 ERROR logger2 /home/tianhu/workspacenew/www.ebay.com_2.0/start.py <module> 153 [Errno 2] No such file or directory: './result/get'
+2016-01-25 10:14:14,913 10623 ERROR logger2 /home/tianhu/workspacenew/www.ebay.com_2.0/start.py <module> 153 [Errno 2] No such file or directory: './result/get'
+2016-01-25 10:14:30,775 10647 ERROR logger2 /home/tianhu/workspacenew/www.ebay.com_2.0/start.py <module> 153 get_listings() takes exactly 1 argument (2 given)
