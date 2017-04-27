@@ -14,4 +14,5 @@ class EbaySpiderItem(scrapy.Item):
     price = scrapy.Field()
     currency = scrapy.Field()
     watching = scrapy.Field()
+    image=scrapy.Field()
     appraisal_index = scrapy.Field()

@@ -14,7 +14,7 @@ from ebay_spider.items import EbaySpiderItem
 
 class EbaySpider(CrawlSpider):
     name = 'ebay'
-    allowed_domains='ebay.com'
+    #allowed_domains='ebay.com'
     start_urls = [
         'http://www.ebay.com/sch/Air-Guns-Slingshots/178886/i.html?LH_ItemCondition=3&LH_BIN=1&LH_RPA=1&_udlo=&_udhi=&LH_LocatedIn=1']
 
@@ -29,6 +29,7 @@ class EbaySpider(CrawlSpider):
             currency = info.xpath('ul[1]/li[1]/span/b/text()').extract()[0]
             watching1 = info.xpath('ul[1]/li[@class="lvextras"]/div/div/text()').extract()
             appraisal_index = info.xpath('div[2]/a[2]/text()').extract()
+            image=info.xpath('div[1]/div/a/img/@src').extract()
 
             title = title1.replace("\n", "").replace("\r", "").replace("\t", "")
             # 获取的watching为list,将list转化为string,去除\n\t,以字符串进行显示
@@ -45,4 +46,5 @@ class EbaySpider(CrawlSpider):
             Ebay['currency'] = currency
             Ebay['watching'] = watching
             Ebay['appraisal_index'] = appraisal_index
+            Ebay['image']=image
             yield Ebay

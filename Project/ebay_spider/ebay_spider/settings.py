@@ -53,7 +53,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'ebay_spider.useragent.UserAgent': 1,
-    #'ebay_spider.proxymiddlewares.ProxyMiddleware': 100,
+    # 'ebay_spider.proxymiddlewares.ProxyMiddleware': 100,
     'scrapy.downloadermiddleware.useragent.UserAgentMiddleware': None,
 }
 
@@ -66,10 +66,14 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    #'ebay_spider.pipelines.EbaySpiderPipeline': 300,
-    'ebay_spider.pipelines.MySQLStorePipeline':300,
-    'ebay_spider.pipelines.JsonWithEncodingEbayPipeline':300,
+    # 'ebay_spider.pipelines.EbaySpiderPipeline': 300,
+    'ebay_spider.pipelines.MySQLStorePipeline': 300,
+    'ebay_spider.pipelines.JsonWithEncodingEbayPipeline': 300,
+    'ebay_spider.pipelines.ImageDownloadPipeline':300,
 }
+
+IMAGES_STORE = '.'
+DOWNLOAD_DELAY = 0.25
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
