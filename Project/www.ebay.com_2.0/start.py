@@ -98,10 +98,10 @@ def modify_config(ope,loc,cate):
     print lines
 def select_category():
     cate_dic=config.category_dic
-    for i in range(1,13):
+    for i in range(1,36):
         print i,cate_dic.keys()[i-1]
     num_cate=raw_input('Select category:')
-    if judge(num_cate,12):
+    if judge(num_cate,35):
         cate=cate_dic.keys()[int(num_cate)-1]
     else:
         print 'Input number is not legal, please re-enter.'

@@ -15,7 +15,7 @@ def get_product_html(line):
     try:
         id=line.strip()
         url="http://www.ebay.com/itm/"+id
-        html=tool.gethtml(url)
+        html=tool.gethtml(url,gzip_page = True)
         if html.find('<urlopen error [Errno -2] Name or service not known>')!=-1:
             logger2.warning(id+'\t'+'<urlopen error [Errno -2] Name or service not known>')
             return

@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//myutil/httptools.py=utf-8
 encoding//myutil/util.py=utf-8
+encoding/demo.py=utf8
+encoding/s3.py=utf8
+encoding/s3_upload.py=utf8

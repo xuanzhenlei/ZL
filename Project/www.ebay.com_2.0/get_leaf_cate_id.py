@@ -11,7 +11,8 @@ logging.config.fileConfig("./log/logging.conf")    # 采用配置文件
 logger1 = logging.getLogger("logger1")   
 logger2 = logging.getLogger("logger2") 
 
-regex_child = re.compile(r'<div class="cat-link">(.*?)</a>')
+#regex_child = re.compile(r'<div class="cat-link">(.*?)</a>')
+regex_child = re.compile(r'<div class="cat-link">(.*?\n.*?\n.*?)<span class="cnt" >')
 regex_cate_id = re.compile(r'sch/.*?/(.*?)/')
 
 regex_root_cate_info = re.compile(r"<li itemprop='itemListElement'(.*?)</li>",re.S)

@@ -3,6 +3,8 @@ import json
 import re
 import time
 import urllib2
+import os
+import gzip
 
 def get_html(url):
     try:
@@ -45,6 +47,7 @@ def get_dropdownlist(asin,html):   #获取下拉框内容
                     tt2 = json.loads(stt2,encoding='UTF-8')
                     for item in tt2:
                         pic_url = (item["displayImgUrl"]).replace("\u002F","/")
+                        pic_url = pic_url.replace('s-l64','s-l1600').replace('s-l500','s-l1600')
                         PicMap.append(pic_url)
                 if ss1:
                     picTrueMenu=""
@@ -67,13 +70,13 @@ def get_dropdownlist(asin,html):   #获取下拉框内容
                     menuItemPicIndexMap = tt1["menuItemPictureIndexMap"]  #获取menu与图片的map
 
                     itemVariationsMap = tt1["itemVariationsMap"]  #获得Variations组合信息。
-                    print itemVariationsMap
+#                     print itemVariationsMap
                 
                     for key in itemVariationsMap:
                         inStock = itemVariationsMap[key]['inStock']
                         if inStock is True:
                             price = itemVariationsMap[key]['price']
-                            inventory = itemVariationsMap[key]['quantityAvailable']
+                            inventory = itemVariationsMap[key]['quantityAvailable']#可用库存
                             quantitySold = itemVariationsMap[key]['quantitySold']
                             watchCount = itemVariationsMap[key]['watchCount']
                             menuIdmap=itemVariationsMap[key]['traitValuesMap']
@@ -82,8 +85,13 @@ def get_dropdownlist(asin,html):   #获取下拉框内容
                                 pic_list =[]
                                 picIndex = menuIdmap[picTrueMenu]
                                 picture =menuItemPicIndexMap[str(picIndex)]
-                               
-                                pic_list=PicMap
+                                #add by yizhong
+                                for index in picture:
+                                    ss3=re.compile(r'src=\"(\S*?)\" \S* index=\"%s\"'%index, re.S).search(html)
+                                    pic = ss3.group(1)
+                                    pic = pic.replace('s-l64','s-l1600').replace('s-l500','s-l1600')
+                                    PicMap.insert(0,pic)
+                                pic_list=PicMap[0:8]
                                 for key in menuIdmap:
                                     menuIdmap[key] = Id_Name_Map[menuIdmap[key]]
                                 menuIdmap['Price']= price
@@ -135,7 +143,7 @@ def get_info(asin,html):
     image_list = []
     img=re.compile(r'id="vi_main_img_fs" class="fs_imgc"(.*?)</ul>', re.S).search(html)
     if img is not None:
-        img_frame = img.group(1).replace('l64','l1600')
+        img_frame = img.group(1).replace('l64','l1600').replace('l500','l1600')
         image_list = re.compile(r'<img src=\"(.*?)"').findall(img_frame)
 #     is_trs='1'
 #     trs=re.compile(r'<div class="si-trs-img">(.*?)</div>',re.S).search(html)
@@ -155,9 +163,10 @@ def get_info(asin,html):
     else:
         img=re.search(r'itemprop="image" src="(.*?)"',html)
         if img!=None:
-            img=img.group(1).replace('l64','l1600')
+            img=img.group(1).replace('l64','l1600').replace('l500','l1600')
             image_list.append(img)
     starttime=time.time()
+#     print image_list
     reg_title = re.search(r'<title>(.*?)</title>', html)#标题
     if reg_title!=None:
         title_info=reg_title.group(1)
@@ -203,10 +212,17 @@ def get_info(asin,html):
     
     price=re.search(r'class="notranslate".*?>(.*?)</span>',html)
     if price is not None :
-            item_price_info=price.group(1)
+            item_price_info=price.group(1).replace(',','')
             item_price=re.search(r'[0-9]+\.?[0-9]+',item_price_info).group()
             currency=re.search(r'[a-zA-Z]*',item_price_info).group()
-    
+#     price=re.search(r'class="notranslate".*?>(.*?)</span>',html)
+#     if price is not None:
+#         item_price=price.group(1)
+#     else:
+#         price=re.search(r'class="notranslate".*?>\s+(.*?)</span>',html,re.S)
+#         if price != None:
+#             item_price=price.group(1)
+
     sp=re.compile(r'<span id=\"fshippingCost\"(.*?)>\s*<span>(.*?)</span>(.*?)<span id="fShippingSvc"\s*>',re.S).search(html)
     if sp is not None:
         s_price=sp.group(2).strip()
@@ -218,8 +234,8 @@ def get_info(asin,html):
         sp = re.search('<div style="font-weight:bold;">(.*?)</div>', html)
         if sp is not None:
             ship_price = sp.group(1)
-    
-    
+
+
 
     reg_wat_num = re.search(r'<span class="vi-buybox-watchcount">(.*?)</span>', html)
    
@@ -236,11 +252,20 @@ def get_info(asin,html):
     
     #注册地
     reg_land = ''
-    html1 = get_html('http://www.ebay.com/usr/' + seller)
-    seller_reg = re.search('Based in (.*?),',html1)
-    if seller_reg != None:
-        reg_land = seller_reg.group(1)
-    
+#     seller_map=os.listdir('./sellers')
+#     if seller in seller_map:
+#         with open('sellers'+'/'+seller,'r') as f:
+#             html1 = f.read()
+#     else:
+#         html1 = get_html('http://www.ebay.com/usr/' + seller)
+#         print seller
+#         with open('sellers'+'/'+seller,'w') as f:
+#             f.write(html1)
+#   
+#     seller_reg = re.search('Based in (.*?),',html1)
+#     if seller_reg != None:
+#         reg_land = seller_reg.group(1)
+
     #haoping
     score = "0"
     feed_score=re.search(r'<span class="mbg-l">(.*?)</div>', html,re.S)
@@ -285,6 +310,7 @@ def get_info(asin,html):
             if len(drop_pic)>0:
 #                 infor = [variationId,brand,item_seller,asin,title,item_category.get('ids'),item_category.get('names'),str(drop_inventory),str(item_score),str(drop_quantitySold),str(drop_watchCount),item_price,ship_price,item_location,self.nowtime,seller_positive,convbid_price,seller_url,description,item_weight,drop_down_size,drop_down_color,features['condition'],features['feature1'],features['feature2'],features['feature3'],features['feature4'],url_img,drop_pic[0],drop_pic[1],drop_pic[2],drop_pic[3],drop_pic[4],drop_pic[5],drop_pic[6],drop_pic[7],drop_zuhe,upc,EAN,MPN,is_trs,'']
                 image=drop_pic
+                print image
             else:
                 image=image_list
 #                 infor = [variationId,brand,item_seller,asin,title,item_category.get('ids'),item_category.get('names'),str(drop_inventory),str(item_score),str(drop_quantitySold),str(drop_watchCount),item_price,ship_price,item_location,self.nowtime,seller_positive,convbid_price,seller_url,description,item_weight,drop_down_size,drop_down_color,features['condition'],features['feature1'],features['feature2'],features['feature3'],features['feature4'],url_img,image[0],image[1],image[2],image[3],image[4],image[5],image[6],image[7],drop_zuhe,upc,EAN,MPN,is_trs,'']
@@ -348,11 +374,13 @@ def get_info(asin,html):
         return item_info   
                                       
 if __name__=="__main__":
-    htmlfile=open('1.html','r')
-    html=htmlfile.read()
-    asin='1'
+#     htmlfile=gzip.open('asin/131732874071.html','r')
+#     html=htmlfile.read()
+    asin='281849334292'
+    with open('1.html') as h:
+        html = h.read()
     a=get_info(asin,html)
     print len(a)
-    for i in a:
-        print i
+#     for i in a:
+#         print i
     
