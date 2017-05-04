@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
-root_name='doll-bears'
-root_category_id='237'
+root_name='coins'
+root_category_id='11116'
 loc='cn'
 ope='get'
 url='http://www.ebay.com/sch/[category]/i.html?&LH_ItemCondition=3&LH_BIN=1&LH_RPA=1&LH_LocatedIn=45&_ipg=200&_pgn=1&_udlo=&_udhi=&_dmd=1'

@@ -371,8 +371,8 @@ if __name__=="__main__":
     rootdir="./result/get/cn/"+cate+"/get_pro_html/"+cate+"_ProHtmlFile"
     file = open('ebay_info.csv','wb')
     data=["product_id","url","category","category_id_path","category_id","key_name","name","brand","upc",
-          "ean","isbn","mpn","image","detail","price","currency","shipping","seller_id","attributes","key_attribute",
-          "location","registered_land","shipping_to","orders"]
+          "ean","isbn","mpn","detail","price","currency","shipping","seller_id","attributes","key_attribute",
+          "location","registered_land","shipping_to"]
     writer=csv.writer(file)
     writer.writerow(data)
     for filenames in os.walk(rootdir):
@@ -382,10 +382,10 @@ if __name__=="__main__":
             with open(html_one) as h:
                 html = h.read()
             info=get_info(asin,html)
-            file.write('%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'%
+            file.write('%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n'%
                        (info['product_id'],info['url'],info['category'],info['category_id_path'],info['category_id'],info['key_name'],info['name'],
-                        info['brand'],info['upc'],info['ean'],info['isbn'],info['mpn'],info['image'],info['detail'],info['price'],info['currency'],
-                        info['shipping'],info['seller_id'],info['attributes'],info['key_attribute'],info['location'],info['registered_land'],info['shipping_to'],info['orders']))
+                        info['brand'],info['upc'],info['ean'],info['isbn'],info['mpn'],info['detail'],info['price'],info['currency'],
+                        info['shipping'],info['seller_id'],info['attributes'],info['key_attribute'],info['location'],info['registered_land'],info['shipping_to']))
     file.close()
 #最初只是解析单个页面,然后将数据打印出来
 #    # htmlfile=gzip.open('asin/131732874071.html','r')
